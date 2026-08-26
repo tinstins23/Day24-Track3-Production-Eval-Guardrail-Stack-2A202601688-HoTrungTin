@@ -1,0 +1,138 @@
+{
+  "total_questions": 50,
+  "per_distribution": {
+    "factual": {
+      "count": 20,
+      "faithfulness": 0.8583333333333332,
+      "answer_relevancy": 0.7906029398981089,
+      "context_precision": 0.9749999999354166,
+      "context_recall": 0.95,
+      "avg_score": 0.8934840682917148
+    },
+    "multi_hop": {
+      "count": 20,
+      "faithfulness": 0.5233333333333334,
+      "answer_relevancy": 0.7079075945641377,
+      "context_precision": 0.8958333332977082,
+      "context_recall": 0.8708333333333332,
+      "avg_score": 0.7494768986321281
+    },
+    "adversarial": {
+      "count": 10,
+      "faithfulness": 0.6666666666666667,
+      "answer_relevancy": 0.6087525823627363,
+      "context_precision": 0.9499999999458332,
+      "context_recall": 0.6833333333333333,
+      "avg_score": 0.7271881455771423
+    }
+  },
+  "failure_clusters": {
+    "matrix": {
+      "faithfulness": {
+        "factual": 4,
+        "multi_hop": 13,
+        "adversarial": 4
+      },
+      "context_recall": {
+        "factual": 2,
+        "multi_hop": 2,
+        "adversarial": 5
+      },
+      "context_precision": {
+        "factual": 0,
+        "multi_hop": 0,
+        "adversarial": 0
+      },
+      "answer_relevancy": {
+        "factual": 14,
+        "multi_hop": 5,
+        "adversarial": 1
+      }
+    },
+    "dominant_failure_distribution": "multi_hop",
+    "dominant_failure_metric": "faithfulness",
+    "insight": "Distribution 'multi_hop' có nhiều failure nhất (avg_score=0.749). Metric 'faithfulness' là điểm yếu chủ đạo. Gợi ý: Tighten system prompt, lower temperature"
+  },
+  "bottom_10": [
+    {
+      "rank": 1,
+      "question_id": 39,
+      "distribution": "multi_hop",
+      "question": "So sánh yêu cầu mật khẩu giữa policy v1.0 và v2.0 về độ dài tối thiểu, thời hạn đổi và MFA.",
+      "avg_score": 0.25,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 2,
+      "question_id": 33,
+      "distribution": "multi_hop",
+      "question": "Nhân viên Manager có thâm niên 12 năm: tổng phụ cấp hàng tháng và số ngày phép năm theo v2024 là bao nhiêu?",
+      "avg_score": 0.2708,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 3,
+      "question_id": 43,
+      "distribution": "adversarial",
+      "question": "Mật khẩu phải có tối thiểu bao nhiêu ký tự?",
+      "avg_score": 0.375,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 4,
+      "question_id": 44,
+      "distribution": "adversarial",
+      "question": "Bao lâu phải đổi mật khẩu một lần?",
+      "avg_score": 0.375,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 5,
+      "question_id": 50,
+      "distribution": "adversarial",
+      "question": "Nhân viên Manager có thể dùng VPN cá nhân (như NordVPN) khi WFH để tăng bảo mật thêm không?",
+      "avg_score": 0.375,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 6,
+      "question_id": 9,
+      "distribution": "factual",
+      "question": "Nam nhân viên được nghỉ bao nhiêu ngày khi vợ sinh con?",
+      "avg_score": 0.5,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 7,
+      "question_id": 21,
+      "distribution": "multi_hop",
+      "question": "Một nhân viên Senior có 9 năm thâm niên được nghỉ bao nhiêu ngày phép năm và lương trong khoảng nào?",
+      "avg_score": 0.5833,
+      "worst_metric": "answer_relevancy"
+    },
+    {
+      "rank": 8,
+      "question_id": 22,
+      "distribution": "multi_hop",
+      "question": "Nếu cần mua một chiếc laptop 30 triệu cho nhân viên mới, ai phê duyệt và cần gì từ phòng CNTT?",
+      "avg_score": 0.5971,
+      "worst_metric": "context_recall"
+    },
+    {
+      "rank": 9,
+      "question_id": 31,
+      "distribution": "multi_hop",
+      "question": "Nhân viên đi công tác trong nước 2 ngày, ở khách sạn giá 1.500.000 VNĐ/đêm. Công ty thanh toán tối đa bao nhiêu cho tiền khách sạn?",
+      "avg_score": 0.6217,
+      "worst_metric": "faithfulness"
+    },
+    {
+      "rank": 10,
+      "question_id": 5,
+      "distribution": "factual",
+      "question": "Muốn mua thiết bị trị giá 55 triệu cần ai phê duyệt?",
+      "avg_score": 0.6358,
+      "worst_metric": "faithfulness"
+    }
+  ]
+}
